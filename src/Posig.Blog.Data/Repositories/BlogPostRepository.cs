@@ -25,6 +25,7 @@ namespace Posig.Blog.Data.Repositories
                 .AsNoTracking()
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
+                .OrderBy(bp => bp.Title)
                 .Select(bp => new ListBlogPostDTO
                 {
                     Id = bp.Id,

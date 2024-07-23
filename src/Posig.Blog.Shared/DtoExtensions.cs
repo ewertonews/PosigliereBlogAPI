@@ -15,13 +15,14 @@ namespace Posig.Blog.Shared
             };
         }
 
-        public static Comment ToComment(this CreateBlogPostCommentDto blogPostCommentDto)
+        public static Comment ToComment(this CreateBlogPostCommentDto blogPostCommentDto, BlogPost blogPost)
         {
             return new Comment
             {
                 Author = blogPostCommentDto.Author,
                 CommentText = blogPostCommentDto.CommentText,
                 CreatedAt = DateTime.Now,
+                BlogPostId = blogPost.Id,
             };
         }
     }

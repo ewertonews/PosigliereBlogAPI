@@ -8,7 +8,7 @@ namespace Posig.Blog.Data.Extensions
     {
         public static void AddBlogContext(this IServiceCollection services)
         {
-            services.AddDbContext<PosigBlogContext>(options => options.UseInMemoryDatabase("posig.blogposts"));
+            services.AddDbContext<PosigBlogContext>(options => options.UseSqlite("Data Source=posig.blogposts.db"));
         }
 
         public static void AddRepositories(this IServiceCollection services)
