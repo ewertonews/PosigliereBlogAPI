@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Posig.Blog.Data.Entities
+namespace Posig.Blog.Shared.Entities
 {
     public class BaseEntity
     {

@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Posig.Blog.Data.Entities;
 using Posig.Blog.Data.Extensions;
 using Posig.Blog.Shared;
+using Posig.Blog.Shared.DTOs;
+using Posig.Blog.Shared.Entities;
 
 namespace Posig.Blog.Data.Repositories
 {
@@ -11,10 +12,30 @@ namespace Posig.Blog.Data.Repositories
         {            
         }
 
-        public async Task<PagedList<BlogPost>> GetPagedBlogPosts(int pageNumber, int pageSize)
+        public async Task<PagedRecords<ListBlogPostDTO>> GetPagedBlogPosts(int pageNumber, int pageSize, string? searchTerm)
         {
-            var blogPosts = await GetAll().Skip((pageNumber - 1) * pageSize).Take(pageSize).ToListAsync();
-            return blogPosts.ToPagedList(pageNumber, pageSize);
+            IQueryable<BlogPost> blogPostsQuery = GetAll();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                blogPostsQuery = blogPostsQuery.Where(b => b.Title.Contains(searchTerm.Trim()));
+            }    
+            
+            List<ListBlogPostDTO> blogPosts = await blogPostsQuery
+                .AsNoTracking()
+                .Skip((pageNumber - 1) * pageSize)
+                .Take(pageSize)
+                .Select(bp => new ListBlogPostDTO
+                {
+                    Id = bp.Id,
+                    Title = bp.Title,
+                    NumberOfComments = bp.Comments.Count
+                }).ToListAsync();
+
+
+
+            PagedRecords<ListBlogPostDTO> paged = blogPosts.ToPagedList(pageNumber, pageSize);
+            return paged;
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Posig.Blog.Data.Entities;
+using Posig.Blog.Shared.Entities;
 
 namespace Posig.Blog.Data
 {

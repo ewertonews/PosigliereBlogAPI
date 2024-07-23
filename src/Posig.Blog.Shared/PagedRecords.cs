@@ -1,6 +1,6 @@
 ﻿namespace Posig.Blog.Shared
 {
-    public class PagedList<T> { 
+    public class PagedRecords<T> { 
 
         public required ResponseMetadata Metadata { get; set; }
 

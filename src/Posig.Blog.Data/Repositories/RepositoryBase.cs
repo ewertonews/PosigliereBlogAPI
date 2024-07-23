@@ -1,10 +1,10 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Posig.Blog.Data.Entities;
+using Posig.Blog.Shared.Entities;
 using System.Linq.Expressions;
 
 namespace Posig.Blog.Data.Repositories
 {
-    public class RepositoryBase<T> : IRepository<T> where T : BaseEntity
+    public abstract class RepositoryBase<T> : IRepository<T> where T : BaseEntity
     {
         private readonly PosigBlogContext _context;
 
@@ -13,7 +13,7 @@ namespace Posig.Blog.Data.Repositories
             _context = context;
         }
 
-        public async Task<T?> GetByIdAsync(int id) => await _context.Set<T>().FindAsync(id);
+        public async Task<T?> GetByIdAsync(Guid id) => await _context.Set<T>().FindAsync(id);
 
         public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression) => _context.Set<T>().Where(expression).AsNoTracking();
 

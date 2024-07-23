@@ -4,9 +4,9 @@ namespace Posig.Blog.Data.Extensions
 {
     public static class ListExtensions
     {
-        public static PagedList<T> ToPagedList<T>(this List<T> list, int pageNumber, int pageSize)
+        public static PagedRecords<T> ToPagedList<T>(this List<T> list, int pageNumber, int pageSize)
         {
-            return new PagedList<T>()
+            return new PagedRecords<T>()
             {
                 Items = list,
                 Metadata = new ResponseMetadata()
