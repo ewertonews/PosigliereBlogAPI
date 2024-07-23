@@ -13,10 +13,5 @@ namespace Posig.Blog.Data.Entities
 
         public DateTime UpdatedAt { get; set; }
 
-        public Guid? UpdatedBy { get; set; }
-
-        public Guid? CreatedBy { get; set; }
-
-        public bool IsDeleted { get; set; }
     }
 }

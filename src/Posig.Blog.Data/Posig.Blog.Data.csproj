@@ -15,4 +15,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="8.0.7" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Posig.Blog.Shared\Posig.Blog.Shared.csproj" />
+  </ItemGroup>
+
 </Project>

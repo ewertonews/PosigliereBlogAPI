@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Posig.Blog.Logging
+﻿namespace Posig.Blog.Logging
 {
     /// <summary>
     /// Represents the options specified in the app settings for logging using Serilog.
@@ -32,7 +26,7 @@ namespace Posig.Blog.Logging
         /// </summary>
         public SeqLoggingOptions SeqLogging { get; set; } = new SeqLoggingOptions();
 
-        
+
         /// <summary>
         /// The app settings section name where the logging options are specified.
         /// </summary>

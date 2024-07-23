@@ -17,7 +17,7 @@ namespace Posig.Blog.Data.Repositories
 
         public IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression) => _context.Set<T>().Where(expression).AsNoTracking();
 
-        public async Task<IEnumerable<T>> GetAllAsync() => await _context.Set<T>().ToListAsync();
+        public IQueryable<T> GetAll() => _context.Set<T>();
 
         public async Task AddAsync(T entity)
         {

@@ -5,7 +5,7 @@ namespace Posig.Blog.Data.Repositories
     public interface IRepository<T> where T : class
     {
         Task<T?> GetByIdAsync(int id);
-        Task<IEnumerable<T>> GetAllAsync();
+        IQueryable<T> GetAll();
         IQueryable<T> FindByCondition(Expression<Func<T, bool>> expression);
         Task AddAsync(T entity);
         void Update(T entity);
