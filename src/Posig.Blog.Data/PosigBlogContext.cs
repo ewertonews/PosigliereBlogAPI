@@ -21,10 +21,10 @@ namespace Posig.Blog.Data
                 .HasIndex(b => b.Title)
                 .IsUnique();
 
-            List<Guid> blogPostIds = [Guid.NewGuid(), Guid.NewGuid()];
+            //List<Guid> blogPostIds = [Guid.NewGuid(), Guid.NewGuid()];
 
-            var blogPosts = BlogPostsSeedData.GetBlogPosts(blogPostIds);
-            var comments = BlogPostsSeedData.GetComments(blogPostIds);
+            var blogPosts = BlogPostsSeedData.GetBlogPosts();
+            var comments = BlogPostsSeedData.GetComments();
 
             modelBuilder.Entity<BlogPost>().HasData(blogPosts);
             modelBuilder.Entity<Comment>().HasData(comments);

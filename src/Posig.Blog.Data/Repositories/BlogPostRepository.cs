@@ -12,7 +12,7 @@ namespace Posig.Blog.Data.Repositories
         {            
         }
 
-        public async Task<PagedRecords<ListBlogPostDTO>> GetPagedBlogPosts(int pageNumber, int pageSize, string? searchTerm)
+        public async Task<PagedRecords<ListBlogPostDto>> GetPagedBlogPosts(int pageNumber, int pageSize, string? searchTerm)
         {
             IQueryable<BlogPost> blogPostsQuery = GetAll();
 
@@ -21,21 +21,16 @@ namespace Posig.Blog.Data.Repositories
                 blogPostsQuery = blogPostsQuery.Where(b => b.Title.Contains(searchTerm.Trim()));
             }    
             
-            List<ListBlogPostDTO> blogPosts = await blogPostsQuery
+            List<ListBlogPostDto> blogPosts = await blogPostsQuery
                 .AsNoTracking()
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .OrderBy(bp => bp.Title)
-                .Select(bp => new ListBlogPostDTO
-                {
-                    Id = bp.Id,
-                    Title = bp.Title,
-                    NumberOfComments = bp.Comments.Count
-                }).ToListAsync();
+                .Select(bp => ListBlogPostDto.FromBlogPost(bp))
+                .ToListAsync();
 
 
-
-            PagedRecords<ListBlogPostDTO> paged = blogPosts.ToPagedList(pageNumber, pageSize);
+            PagedRecords<ListBlogPostDto> paged = blogPosts.ToPagedList(pageNumber, pageSize);
             return paged;
         }
     }

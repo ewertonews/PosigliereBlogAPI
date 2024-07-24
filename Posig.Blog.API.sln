@@ -5,13 +5,15 @@ VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Posig.Blog.API", "src\Posig.Blog.API\Posig.Blog.API.csproj", "{BC74F722-A9F8-4DC3-84BB-0B4D56A86EF7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Posig.Blog.Data", "src\Posig.Blog.Data\Posig.Blog.Data.csproj", "{E60A09B2-C137-4D19-87CC-8A4A810F1693}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Posig.Blog.Data", "src\Posig.Blog.Data\Posig.Blog.Data.csproj", "{E60A09B2-C137-4D19-87CC-8A4A810F1693}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Posig.Blog.Services", "src\Posig.Blog.Services\Posig.Blog.Services.csproj", "{6CDDAF6A-5DE4-4C0C-9437-7D3C08A159D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Posig.Blog.Services", "src\Posig.Blog.Services\Posig.Blog.Services.csproj", "{6CDDAF6A-5DE4-4C0C-9437-7D3C08A159D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Posig.Blog.Logging", "src\Posig.Blog.Logging\Posig.Blog.Logging.csproj", "{07F77DEF-74CA-402D-9CA0-9FA92F39F7E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Posig.Blog.Logging", "src\Posig.Blog.Logging\Posig.Blog.Logging.csproj", "{07F77DEF-74CA-402D-9CA0-9FA92F39F7E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Posig.Blog.Shared", "src\Posig.Blog.Shared\Posig.Blog.Shared.csproj", "{F959ED47-E857-4A58-9E2C-9CDB35E03346}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Posig.Blog.Shared", "src\Posig.Blog.Shared\Posig.Blog.Shared.csproj", "{F959ED47-E857-4A58-9E2C-9CDB35E03346}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Posig.Blog.Tests", "tests\Posig.Blog.Tests\Posig.Blog.Tests.csproj", "{5E1683D5-36BD-487D-A7B0-75AADADACA27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{F959ED47-E857-4A58-9E2C-9CDB35E03346}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F959ED47-E857-4A58-9E2C-9CDB35E03346}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F959ED47-E857-4A58-9E2C-9CDB35E03346}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E1683D5-36BD-487D-A7B0-75AADADACA27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E1683D5-36BD-487D-A7B0-75AADADACA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E1683D5-36BD-487D-A7B0-75AADADACA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E1683D5-36BD-487D-A7B0-75AADADACA27}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

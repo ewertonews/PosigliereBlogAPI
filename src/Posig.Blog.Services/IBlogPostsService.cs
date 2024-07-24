@@ -7,7 +7,7 @@ namespace Posig.Blog.Services
     {
         Task<BlogPostCommentDto?> AddCommentToBlogPost(Guid blogPostId, CreateBlogPostCommentDto blogPostComment);
         Task<BlogPostDTO> CreateBlogPost(CreateBlogPostDto newBlogPost);
-        Task<PagedRecords<ListBlogPostDTO>> GetBlogPosts(int pageNumber, int pageSize, string? searchTerm);
+        Task<PagedRecords<ListBlogPostDto>> GetBlogPosts(int pageNumber, int pageSize, string? searchTerm);
         Task<BlogPostDTO?> GetPostById(Guid blogPostId);
     }
 }

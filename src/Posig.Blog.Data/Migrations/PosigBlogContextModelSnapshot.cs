@@ -51,21 +51,21 @@ namespace Posig.Blog.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("e3d1d95b-3c1b-4794-b672-6902383c42de"),
+                            Id = new Guid("0d066420-c24e-4475-878b-37c590b5c9c9"),
                             Author = "Author 1",
                             Content = "Content for blog post 1",
-                            CreatedAt = new DateTime(2024, 7, 23, 15, 53, 48, 500, DateTimeKind.Local).AddTicks(7565),
+                            CreatedAt = new DateTime(2024, 7, 24, 10, 46, 1, 308, DateTimeKind.Local).AddTicks(5822),
                             Title = "Blog Post 1",
-                            UpdatedAt = new DateTime(2024, 7, 23, 15, 53, 48, 500, DateTimeKind.Local).AddTicks(7584)
+                            UpdatedAt = new DateTime(2024, 7, 24, 10, 46, 1, 308, DateTimeKind.Local).AddTicks(5834)
                         },
                         new
                         {
-                            Id = new Guid("65de260f-fad3-4983-adbd-af4b69f16b14"),
+                            Id = new Guid("48158052-7ae1-4c1f-bfc9-5c5ab2d808fb"),
                             Author = "Author 2",
                             Content = "Content for blog post 2",
-                            CreatedAt = new DateTime(2024, 7, 23, 15, 53, 48, 500, DateTimeKind.Local).AddTicks(7588),
+                            CreatedAt = new DateTime(2024, 7, 24, 10, 46, 1, 308, DateTimeKind.Local).AddTicks(5841),
                             Title = "Blog Post 2",
-                            UpdatedAt = new DateTime(2024, 7, 23, 15, 53, 48, 500, DateTimeKind.Local).AddTicks(7589)
+                            UpdatedAt = new DateTime(2024, 7, 24, 10, 46, 1, 308, DateTimeKind.Local).AddTicks(5842)
                         });
                 });
 
@@ -101,30 +101,30 @@ namespace Posig.Blog.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("21617f22-c34e-4ed4-a46d-723e441317a9"),
+                            Id = new Guid("a0064eaa-8c20-4234-a1ee-ad84a8debbcd"),
                             Author = "Commenter 1",
-                            BlogPostId = new Guid("e3d1d95b-3c1b-4794-b672-6902383c42de"),
+                            BlogPostId = new Guid("0d066420-c24e-4475-878b-37c590b5c9c9"),
                             CommentText = "This is a comment",
-                            CreatedAt = new DateTime(2024, 7, 23, 15, 53, 48, 500, DateTimeKind.Local).AddTicks(7595),
-                            UpdatedAt = new DateTime(2024, 7, 23, 15, 53, 48, 500, DateTimeKind.Local).AddTicks(7596)
+                            CreatedAt = new DateTime(2024, 7, 24, 10, 46, 1, 308, DateTimeKind.Local).AddTicks(5884),
+                            UpdatedAt = new DateTime(2024, 7, 24, 10, 46, 1, 308, DateTimeKind.Local).AddTicks(5885)
                         },
                         new
                         {
-                            Id = new Guid("ee8f5c03-91ff-4636-821c-fb03f352377d"),
+                            Id = new Guid("b15d0946-9db5-449a-a860-5dd31c91bc41"),
                             Author = "Commenter 2",
-                            BlogPostId = new Guid("e3d1d95b-3c1b-4794-b672-6902383c42de"),
+                            BlogPostId = new Guid("0d066420-c24e-4475-878b-37c590b5c9c9"),
                             CommentText = "This is another comment",
-                            CreatedAt = new DateTime(2024, 7, 23, 15, 53, 48, 500, DateTimeKind.Local).AddTicks(7600),
-                            UpdatedAt = new DateTime(2024, 7, 23, 15, 53, 48, 500, DateTimeKind.Local).AddTicks(7601)
+                            CreatedAt = new DateTime(2024, 7, 24, 10, 46, 1, 308, DateTimeKind.Local).AddTicks(5888),
+                            UpdatedAt = new DateTime(2024, 7, 24, 10, 46, 1, 308, DateTimeKind.Local).AddTicks(5889)
                         },
                         new
                         {
-                            Id = new Guid("9219b544-e4df-402d-8d75-a844ee0907f4"),
+                            Id = new Guid("5ad48bdb-8f22-47ce-bf09-851516cfdc54"),
                             Author = "Commenter 3",
-                            BlogPostId = new Guid("65de260f-fad3-4983-adbd-af4b69f16b14"),
+                            BlogPostId = new Guid("48158052-7ae1-4c1f-bfc9-5c5ab2d808fb"),
                             CommentText = "This is a comment on post 2",
-                            CreatedAt = new DateTime(2024, 7, 23, 15, 53, 48, 500, DateTimeKind.Local).AddTicks(7604),
-                            UpdatedAt = new DateTime(2024, 7, 23, 15, 53, 48, 500, DateTimeKind.Local).AddTicks(7605)
+                            CreatedAt = new DateTime(2024, 7, 24, 10, 46, 1, 308, DateTimeKind.Local).AddTicks(5892),
+                            UpdatedAt = new DateTime(2024, 7, 24, 10, 46, 1, 308, DateTimeKind.Local).AddTicks(5892)
                         });
                 });
 

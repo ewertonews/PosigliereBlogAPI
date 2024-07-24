@@ -6,6 +6,6 @@ namespace Posig.Blog.Data.Repositories
 {
     public interface IBlogPostRepository : IRepository<BlogPost>
     {
-        Task<PagedRecords<ListBlogPostDTO>> GetPagedBlogPosts(int pageNumber, int pageSize, string? searchTerm);
+        Task<PagedRecords<ListBlogPostDto>> GetPagedBlogPosts(int pageNumber, int pageSize, string? searchTerm);
     }
 }

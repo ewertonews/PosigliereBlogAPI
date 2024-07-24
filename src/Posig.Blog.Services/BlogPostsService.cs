@@ -39,7 +39,7 @@ namespace Posig.Blog.Services
             }
         }
 
-        public async Task<PagedRecords<ListBlogPostDTO>> GetBlogPosts(int pageNumber, int pageSize, string? searchTerm)
+        public async Task<PagedRecords<ListBlogPostDto>> GetBlogPosts(int pageNumber, int pageSize, string? searchTerm)
         {
             try
             {

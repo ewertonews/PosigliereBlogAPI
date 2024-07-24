@@ -3,7 +3,7 @@ using Posig.Blog.Shared.Entities;
 
 namespace Posig.Blog.Shared
 {
-    public static class DTOExtensions
+    public static class DtoExtensions
     {
         public static BlogPost ToBlogPost(this CreateBlogPostDto dto)
         {

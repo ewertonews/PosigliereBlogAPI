@@ -4,14 +4,17 @@ namespace Posig.Blog.Data
 {
     public static class BlogPostsSeedData
     {
-        public static List<BlogPost> GetBlogPosts(List<Guid> blogPostIds)
+        private static Guid blogPostId1 = Guid.NewGuid();
+        private static Guid blogPostId2 = Guid.NewGuid();
+
+        public static List<BlogPost> GetBlogPosts()
         {
 
             return new List<BlogPost>
             {
                 new BlogPost
                 {
-                    Id = blogPostIds[0],
+                    Id = blogPostId1,
                     Author = "Author 1",
                     Title = "Blog Post 1",
                     Content = "Content for blog post 1",
@@ -20,7 +23,7 @@ namespace Posig.Blog.Data
                 },
                 new BlogPost
                 {
-                    Id = blogPostIds[1],
+                    Id = blogPostId2,
                     Author = "Author 2",
                     Title = "Blog Post 2",
                     Content = "Content for blog post 2",
@@ -30,7 +33,7 @@ namespace Posig.Blog.Data
             };
         }
 
-        public static List<Comment> GetComments(List<Guid> blogPostIds)
+        public static List<Comment> GetComments()
         {
             return new List<Comment>
             {
@@ -41,7 +44,7 @@ namespace Posig.Blog.Data
                     CommentText = "This is a comment",
                     CreatedAt = DateTime.Now,
                     UpdatedAt = DateTime.Now,
-                    BlogPostId = blogPostIds[0]
+                    BlogPostId = blogPostId1
                 },
                 new Comment
                 {
@@ -50,7 +53,7 @@ namespace Posig.Blog.Data
                     CommentText = "This is another comment",
                     CreatedAt = DateTime.Now,
                     UpdatedAt = DateTime.Now,
-                    BlogPostId = blogPostIds[0]
+                    BlogPostId = blogPostId1
                 },
                 new Comment
                 {
@@ -59,7 +62,7 @@ namespace Posig.Blog.Data
                     CommentText = "This is a comment on post 2",
                     CreatedAt = DateTime.Now,
                     UpdatedAt = DateTime.Now,
-                    BlogPostId = blogPostIds[1]
+                    BlogPostId = blogPostId2
                 }
             };
         }

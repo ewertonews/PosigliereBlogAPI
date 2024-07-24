@@ -9,7 +9,7 @@ namespace Posig.Blog.Data.Extensions
             return new PagedRecords<T>()
             {
                 Items = list,
-                Metadata = new ResponseMetadata()
+                Metadata = new PagedRecordsMetadata()
                 {
                     CurrentPage = pageNumber,
                     PageSize = pageSize,

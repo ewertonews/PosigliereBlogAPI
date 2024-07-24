@@ -1,6 +1,6 @@
 ﻿namespace Posig.Blog.Shared
 {
-    public class ResponseMetadata
+    public class PagedRecordsMetadata
     {
         public int CurrentPage { get; set; }
         public int TotalPages { get; set; }
