@@ -18,7 +18,7 @@ namespace Posig.Blog.Data.Repositories
 
             if (!string.IsNullOrEmpty(searchTerm))
             {
-                blogPostsQuery = blogPostsQuery.Where(b => b.Title.Contains(searchTerm.Trim()));
+                blogPostsQuery = blogPostsQuery.Where(b => b.Title.ToLower().Contains(searchTerm.Trim().ToLower()));
             }    
             
             List<ListBlogPostDto> blogPosts = await blogPostsQuery
@@ -26,7 +26,12 @@ namespace Posig.Blog.Data.Repositories
                 .Skip((pageNumber - 1) * pageSize)
                 .Take(pageSize)
                 .OrderBy(bp => bp.Title)
-                .Select(bp => ListBlogPostDto.FromBlogPost(bp))
+               .Select(bp => new ListBlogPostDto
+               {
+                   Id = bp.Id,
+                   Title = bp.Title,
+                   NumberOfComments = bp.Comments.Count()
+               })
                 .ToListAsync();
 
 
