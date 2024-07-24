@@ -110,6 +110,7 @@ namespace Posig.Blog.Tests
             result.Should().NotBeNull();
             result.Items.Should().HaveCount(1);
             result.Items[0].Title.Should().Be(expectedPostTitle);
+            result.Items[0].NumberOfComments.Should().BeGreaterThan(0);
         }
 
         [Fact]
@@ -181,6 +182,13 @@ namespace Posig.Blog.Tests
         private static RepositoryManager GetRepositoryManagerWithInMemoryDb()
         {
             var blogPosts = BlogPostsSeedData.GetBlogPosts();
+            blogPosts[0].Comments
+                .Add(new Comment
+                {
+                    Author = "Ted",
+                    CommentText = "good!",
+                    BlogPostId = blogPosts[0].Id
+                });
 
             var options = new DbContextOptionsBuilder<PosigBlogContext>()
                 .UseInMemoryDatabase(databaseName: "BlogDatabase")
