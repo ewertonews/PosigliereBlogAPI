@@ -15,5 +15,3 @@ The API is using SQLite data and the database file is already in the code, but i
  - Add redis cache 
  - Add Authentication and Authorization (using Identity and Social Logins)
  - Add operations to update and delete a comment
-
-### P.S: Sorry I missed the "r" in the company name :D 
